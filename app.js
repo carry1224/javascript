@@ -230,7 +230,7 @@ for(i;i<=15;i++){
   console.log(i)
 }*/
   
-  let employees=[
+ /* let employees=[
   {fname:'joy',age:34,nationality:'kenyan',gender:'female',id:4},
   {fname:'bill',age:46,nationality:'tanzanian',gender:'male',id:5},
   {fname:'mary',age:23,nationality:'ugandan',gender:'female',id:7}
@@ -240,7 +240,7 @@ console.log(ages.age)
   }
   employees.forEach(allAges)*/
 
-let fd=employees.find(function(names){
+/*let fd=employees.find(function(names){
 return names.id==7
 })
 console.log(fd)
@@ -251,7 +251,7 @@ console.log(fd)
 console.log(filter)*/
 
 //reduce method(combines values in an array to one value)
-let allAges=employees.reduce(function(acc,currentvalue){
+/*let allAges=employees.reduce(function(acc,currentvalue){
   return acc+currentvalue.age
 },0)
 console.log(allAges)
@@ -311,12 +311,26 @@ console.log(div1)
 const maya=div1.getAttributeById('div1')
 console.log(maya)*/
 
-let carry=document.querySelector('.first')
+/*let carry=document.querySelector('.first')
 
 //let tree=all.getAttribute('href')
 let rain=document.querySelector('.list')
 let attr=rain.getAttribute('class')
-console.log(attr)
+console.log(attr)*/
+
+/*function replacetext(){
+  var subscribe=document.getElementById('subscibe')
+  subscribe.setAttribute('disable',true)
+  subscribe.textContent="subscribed"
+}
+console.log(replacetext)*/
+
+let mypara=document.getElementById("myparagraph")
+mypara.classList.add('bold','big-font')
+mypara.classList.remove('big-font')
+mypara.classList.replace('big-font','yellowbg')
+
+console.log(mypara.classList)
 
 
 
