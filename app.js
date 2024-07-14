@@ -284,7 +284,7 @@ heading.style.color="orange"
  //querryselector
 //queryselectorall
 
-let carry=document.querySelector('.one')
+/*let carry=document.querySelector('.one')
 console.log(carry)
 //getelementbyclassname
 let hello=document.getElementsByClassName('bnt')
@@ -302,8 +302,21 @@ console.log(fruits)*/
 
 //nextsibling,previoussibling
 //nextelementsibling,previouselementsibling
-let fruits=document.querySelectorAll('li')
+/*let fruits=document.querySelectorAll('li')
 console.log(fruits)
+
+const div1=getElementsById('div1');
+console.log(div1)
+
+const maya=div1.getAttributeById('div1')
+console.log(maya)*/
+
+let carry=document.querySelector('.first')
+
+//let tree=all.getAttribute('href')
+let rain=document.querySelector('.list')
+let attr=rain.getAttribute('class')
+console.log(attr)
 
 
 
