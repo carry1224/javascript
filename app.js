@@ -344,25 +344,38 @@ btn.addEventListener('keypress',carry)
 //currenttarget-element o which the event handler has been attached to
 //target-identifies the element to which the event occured
 
-let btn=document.querySelectorAll('.btn')
+/*let btn=document.querySelectorAll('.btn')
 btn.forEach(function(e){
   e.addEventListener('click',function(clicked){
 clicked.target.style.color='blue'
 //clicked.currentTarget.style.color='red'
   })
-})
+})*/
  
 let btn1=document.querySelector('.btn1')
-btn1.addEventListener('click',function(){
-btn1.style.color='red'
-btn1.style.fontSize='50px'
+function cb(){
+  btn1.style.color='red'
+  btn1.style.fontSize='50px'
+}
+btn1.addEventListener('click',cb)
+
+
+//create element and create textnode
+
+//return the total age of all employees
+let employees=[
+  {fname:'joy',age:34,nationality:'kenyan',gender:'female',id:4},
+  {fname:'bill',age:46,nationality:'tanzanian',gender:'male',id:5},
+  {fname:'mary',age:23,nationality:'ugandan',gender:'female',id:8},
+  {fname:'mary',age:23,nationality:'kenyan',gender:'female',id:7}
+]
+let allages=employees.reduce(function(acc,currentvalue){
+  return acc+currentvalue.age
+},0)
+console.log(allages)
+
+let filter=employees.filter(function(names){
+  return names.fname=='mary'
 })
-console.log(btn1)
-
-
-
-
-
-
-
+console.log(filter)
 
