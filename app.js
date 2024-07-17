@@ -331,15 +331,33 @@ mypara.classList.remove('big-font')
 mypara.classList.replace('big-font','yellowbg')
 
 console.log(mypara.classList)*/
-function carry(){
+/*function carry(){
   let heading=document.querySelector('.two')
   heading.style.color='pink',
   heading.style.fontSize='50px',
   heading.style.background='purple'
 }
 let btn=document.querySelector('.one')
-btn.addEventListener('mouseover',carry)
- console.log(btn)
+btn.addEventListener('keypress',carry)
+ console.log(btn)*/
+
+//currenttarget-element o which the event handler has been attached to
+//target-identifies the element to which the event occured
+
+let btn=document.querySelectorAll('.btn')
+btn.forEach(function(e){
+  e.addEventListener('click',function(clicked){
+clicked.target.style.color='blue'
+//clicked.currentTarget.style.color='red'
+  })
+})
+ 
+let btn1=document.querySelector('.btn1')
+btn1.addEventListener('click',function(){
+btn1.style.color='red'
+btn1.style.fontSize='50px'
+})
+console.log(btn1)
 
 
 
