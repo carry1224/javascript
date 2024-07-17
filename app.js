@@ -325,12 +325,24 @@ console.log(attr)*/
 }
 console.log(replacetext)*/
 
-let mypara=document.getElementById("myparagraph")
+/*let mypara=document.getElementById("myparagraph")
 mypara.classList.add('bold','big-font')
 mypara.classList.remove('big-font')
 mypara.classList.replace('big-font','yellowbg')
 
-console.log(mypara.classList)
+console.log(mypara.classList)*/
+function carry(){
+  let heading=document.querySelector('.two')
+  heading.style.color='pink',
+  heading.style.fontSize='50px',
+  heading.style.background='purple'
+}
+let btn=document.querySelector('.one')
+btn.addEventListener('mouseover',carry)
+ console.log(btn)
+
+
+
 
 
 
