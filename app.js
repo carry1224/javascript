@@ -352,18 +352,18 @@ clicked.target.style.color='blue'
   })
 })*/
  
-let btn1=document.querySelector('.btn1')
+/*let btn1=document.querySelector('.btn1')
 function cb(){
   btn1.style.color='red'
   btn1.style.fontSize='50px'
 }
-btn1.addEventListener('click',cb)
+btn1.addEventListener('click',cb)*/
 
 
 //create element and create textnode
 
 //return the total age of all employees
-let employees=[
+/*let employees=[
   {fname:'joy',age:34,nationality:'kenyan',gender:'female',id:4},
   {fname:'bill',age:46,nationality:'tanzanian',gender:'male',id:5},
   {fname:'mary',age:23,nationality:'ugandan',gender:'female',id:8},
@@ -378,6 +378,58 @@ let filter=employees.filter(function(names){
   return names.fname=='mary'
 })
 console.log(filter)
+
+/*let thursday=document.querySelector('.two')
+let button=document.querySelector('.three')
+function cb(){
+thursday.style.background='green'
+thursday.style.fontSize='50px'
+thursday.style.color='orange'
+console.log(thursday)}
+ 
+button.addEventListener('click',cb)*/
+
+
+/*let h1=document.querySelector('.today')
+let today=document.querySelectorAll('.btn1')
+ function all(e){
+  h1.style.background='pink'
+  h1.style.fontSize='50px'
+  h1.style.color='lime'
+ }
+today.forEach(function(e){ 
+  e.addEventListener('click',all) */
+  
+/*let calculateTotal=function(subtotal,tax){
+  return subtotal+tax
+}
+
+let order1,order2,order3;
+order1=calculateTotal(10,30);
+order2=calculateTotal(40,50);
+order3=calculateTotal(50,50)
+
+console.log(`the total of order one is ${order1}`)
+console.log(`the total of order two is ${order2}`)
+console.log(`the total of order three is ${order3}`)*/
+
+let person1={
+  Name:'peter',
+  Age:17,
+  Status: 'tourist'
+}
+let person2={
+  Name:'shiko',
+  Age:25,
+  Status: 'resident'
+}
+
+if(person1.age>=18 && person1.status==='resident'){
+  console.log('you can vote')
+}
+else{
+  console.log('you will not vote')
+}
 
 
 
