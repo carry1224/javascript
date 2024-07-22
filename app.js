@@ -431,7 +431,7 @@ else{
   console.log('you will not vote')
 }*/
 
-let h1=document.querySelector('.main_heading')
+/*let h1=document.querySelector('.main_heading')
 let monday=document.querySelectorAll('.btn ')
 let all=monday.forEach(function(c){
 c.addEventListener('click',function(a){
@@ -440,6 +440,24 @@ c.addEventListener('click',function(a){
     h1.style.fontSize='50px'
     h1.style.color='orange'
 })
-})
+})*/
 
 
+let list=document.getElementById('link')
+let all=list.getAttribute('href')
+console.log(all)
+
+let heading=document.querySelector('.all')
+let any=heading.getElementsByTagName('h4')
+console.log(heading)
+
+//textcontent and nodevalues
+//classlists and classnames
+//createelements
+//replacechild
+//prepend innertexts
+//remove and remove child
+//inner html and text content
+//eventbubbling capturing
+//form submit
+//local storage
