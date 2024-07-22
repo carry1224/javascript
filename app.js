@@ -398,7 +398,7 @@ let today=document.querySelectorAll('.btn1')
   h1.style.color='lime'
  }
 today.forEach(function(e){ 
-  e.addEventListener('click',all) */
+  e.addEventListener('click',all)*/
   
 /*let calculateTotal=function(subtotal,tax){
   return subtotal+tax
@@ -413,7 +413,7 @@ console.log(`the total of order one is ${order1}`)
 console.log(`the total of order two is ${order2}`)
 console.log(`the total of order three is ${order3}`)*/
 
-let person1={
+/*let person1={
   Name:'peter',
   Age:17,
   Status: 'tourist'
@@ -429,9 +429,17 @@ if(person1.age>=18 && person1.status==='resident'){
 }
 else{
   console.log('you will not vote')
-}
+}*/
 
-
-
+let h1=document.querySelector('.main_heading')
+let monday=document.querySelectorAll('.btn ')
+let all=monday.forEach(function(c){
+c.addEventListener('click',function(a){
+  let reset=a.currentTarget.classList
+  h1.style.background='pink'
+    h1.style.fontSize='50px'
+    h1.style.color='orange'
+})
+})
 
 
