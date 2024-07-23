@@ -443,7 +443,7 @@ c.addEventListener('click',function(a){
 })*/
 
 
-let list=document.getElementById('link')
+/*let list=document.getElementById('link')
 let all=list.getAttribute('href')
 console.log(all)
 
@@ -473,9 +473,53 @@ let myPara=document.getElementById('mypara')
 myPara.classList.add('bold')
 myPara.classList.add('bg')
 myPara.classList.add('big-font')
-console.log(myPara.classList)
+console.log(myPara.classList)*/
 
+//createtextnode
+/*let one=document.querySelector('.one')
+one.style.background="red"
+one.style.fontSize='40px'
+one.style.color='white'
+one.style.padding='16px'
+let tuesday=document.createElement('div')
+let text=document.createTextNode('HELLO WORLD')
+tuesday.appendChild(text)
+document.body.appendChild(tuesday)
+tuesday.style.background='purple'
+tuesday.style.color='orange'
+tuesday.style.padding='16px'
+tuesday.addEventListener('click',function(){
+  tuesday.style.color='pink'
+  tuesday.style.background='grey'
+  tuesday.style.fontSize='40px'
+  tuesday.style.padding='16px'
+})
+//appendchild and innertext
+let m=document.createElement('h1')
+let text2=document.createTextNode('yesterday was monday')
+m.appendChild(text2)
+document.body.appendChild(m)
+m.style.color='yellow'
+m.style.background='pink'
+m.style.padding='16px'
+m.addEventListener('click',function(){
+m.style.background='blue'
+m.style.color='green'
+m.style.padding='16px'
+m.style.fontSize='40px'
+})
 
+let t=document.createElement('h2')
+t.innerText='A good day'
+document.body.prepend(t)*/
 
-
-
+//remove and removechild(used when in a container)
+let m=document.createElement('h1')
+let text=document.createTextNode('hello world')
+m.appendChild(text)
+document.body.appendChild(m)
+m.style.background='indigo'
+m.style.color='beige'
+m.style.padding='16px'
+m.style.fontSize='40px'
+//let T=m.removeChild(text)
