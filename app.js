@@ -461,3 +461,18 @@ console.log(heading)
 //eventbubbling capturing
 //form submit
 //local storage
+
+let text=document.getElementById('div5')
+text.textContent='mangoes and bananas'
+console.log(text)
+
+let text1=document.getElementById('m')
+console.log(text1.childNodes[0].nodeValue)
+
+let myPara=document.getElementById('mypara')
+myPara.classList.add('bold')
+myPara.classList.add('bg')
+myPara.classList.add('big-font')
+console.log(myPara.classList)
+
+
