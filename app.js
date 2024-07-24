@@ -514,7 +514,7 @@ t.innerText='A good day'
 document.body.prepend(t)*/
 
 //remove and removechild(used when in a container)
-let m=document.createElement('h1')
+/*let m=document.createElement('h1')
 let text=document.createTextNode('hello world')
 m.appendChild(text)
 document.body.appendChild(m)
@@ -538,7 +538,28 @@ document.body.prepend(t)
 t.style.color='white'
 t.style.background='maroon'
 t.style.padding='16px'
-t.style.fontSize='30px'
+t.style.fontSize='30px'*/
 
 
+//innerhtml and textcontent
+let m=document.querySelector('.first')
+let n=document.querySelector('.container')
+let o=document.getElementById('item')
+console.log(m.textContent)
+console.log(m.innerHTML)
 
+
+let content="today is wednesday"
+let list=document.createElement('ul')
+list.innerHTML=` <ul class="first">
+  <li id="item">Kenya</li>
+  <li>Uganda</li>
+</ul>`
+document.body.appendChild(list)
+let list2=document.createElement('h1')
+list2.innerHTML=`<h1>wednesday<h1>`
+document.body.appendChild(list2)
+
+let list3=document.createElement('h2')
+list3.innerHTML=`<h2>thursday<h2>`
+document.body.appendChild(list3)
