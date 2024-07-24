@@ -523,3 +523,22 @@ m.style.color='beige'
 m.style.padding='16px'
 m.style.fontSize='40px'
 //let T=m.removeChild(text)
+
+let r=document.createElement('p')
+let t2=document.createTextNode('i woke up early today,i will get to class early')
+r.appendChild(t2)
+document.body.appendChild(r)
+r.style.color='pink'
+r.style.background='grey'
+r.style.padding='15px'
+
+let t=document.createElement('h1')
+t.innerText='wcw'
+document.body.prepend(t)
+t.style.color='white'
+t.style.background='maroon'
+t.style.padding='16px'
+t.style.fontSize='30px'
+
+
+
