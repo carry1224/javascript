@@ -30,7 +30,6 @@ let msg=`there are ${rem} plates available`
 
 console.log(msg)*/
 
-
 //array
 /*let fruits=['mangoes','oranges','apples']
 console.log(fruits)*/
@@ -54,15 +53,14 @@ let person1={
 
   console.log(person1,person2)*/
 
-  //function
- /* let target=function(element,value,speed){
+//function
+/* let target=function(element,value,speed){
 /* console.log(`hello world`)*/
- /*let total=element+value+speed 
+/*let total=element+value+speed 
  console.log(`here are the totals ${total}`)
 
 }
 target(243,456,678)*/
-
 
 // there are  3 types of functions:statement functioncs , callback functions and anonymous functions
 
@@ -88,7 +86,6 @@ home()*/
 let totalages=students.forEach(function(cate){
   console.log(cate.name)
 })*/
-
 
 /*let calculateTotal=function(subtotal,tax){
 return subtotal+tax
@@ -130,8 +127,6 @@ rem(24,6)*/
 }
 console.log(doors.area(3.142,200))*/
 
-
-
 /*function one(){
   console.log(`i am one`)
 }
@@ -160,7 +155,6 @@ if(fname=='joy' && age==19){
 }else{
   console.log('wrong')
 }*/
-
 
 /*let time=10 
 let day='tuesday'
@@ -229,8 +223,8 @@ for(i;i<=10;i++){
 for(i;i<=15;i++){
   console.log(i)
 }*/
-  
- /* let employees=[
+
+/* let employees=[
   {fname:'joy',age:34,nationality:'kenyan',gender:'female',id:4},
   {fname:'bill',age:46,nationality:'tanzanian',gender:'male',id:5},
   {fname:'mary',age:23,nationality:'ugandan',gender:'female',id:7}
@@ -281,7 +275,7 @@ heading.style.color="orange"
 //getElementbyTagname
  let heading=document.getElementsByTagName('h1')
  heading[0].style.colour='pink'*/
- //querryselector
+//querryselector
 //queryselectorall
 
 /*let carry=document.querySelector('.one')
@@ -351,14 +345,13 @@ clicked.target.style.color='blue'
 //clicked.currentTarget.style.color='red'
   })
 })*/
- 
+
 /*let btn1=document.querySelector('.btn1')
 function cb(){
   btn1.style.color='red'
   btn1.style.fontSize='50px'
 }
 btn1.addEventListener('click',cb)*/
-
 
 //create element and create textnode
 
@@ -389,7 +382,6 @@ console.log(thursday)}
  
 button.addEventListener('click',cb)*/
 
-
 /*let h1=document.querySelector('.today')
 let today=document.querySelectorAll('.btn1')
  function all(e){
@@ -399,7 +391,7 @@ let today=document.querySelectorAll('.btn1')
  }
 today.forEach(function(e){ 
   e.addEventListener('click',all)*/
-  
+
 /*let calculateTotal=function(subtotal,tax){
   return subtotal+tax
 }
@@ -441,7 +433,6 @@ c.addEventListener('click',function(a){
     h1.style.color='orange'
 })
 })*/
-
 
 /*let list=document.getElementById('link')
 let all=list.getAttribute('href')
@@ -540,9 +531,8 @@ t.style.background='maroon'
 t.style.padding='16px'
 t.style.fontSize='30px'*/
 
-
 //innerhtml and textcontent
-let m=document.querySelector('.first')
+/*let m=document.querySelector('.first')
 let n=document.querySelector('.container')
 let o=document.getElementById('item')
 console.log(m.textContent)
@@ -557,9 +547,34 @@ list.innerHTML=` <ul class="first">
 </ul>`
 document.body.appendChild(list)
 let list2=document.createElement('h1')
-list2.innerHTML=`<h1>wednesday<h1>`
+list2.innerHTML=`<h1>${content}<h1>`
 document.body.appendChild(list2)
 
 let list3=document.createElement('h2')
 list3.innerHTML=`<h2>thursday<h2>`
-document.body.appendChild(list3)
+document.body.appendChild(list3)*/
+//contains
+//add
+//remove
+
+let cc = document.querySelector("#one");
+cc.addEventListener("click", function () {
+  let allClass = cc.classList.contains("one");
+  if (allClass) {
+    cc.classList.remove("one");
+  } else {
+    cc.classList.add("one");
+  }
+});
+
+let mm=document.querySelector('#two')
+mm.addEventListener('click',function(){
+  let anyclass=mm.classList.contains('two')
+  if(anyclass){
+    mm.classList.remove('two')
+  }else{
+    mm.classList.add('two')
+  }
+})
+
+

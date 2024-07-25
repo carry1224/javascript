@@ -1,13 +1,20 @@
+.one{
+  text-align:center ;
+  font-size: 2rem;
+  background-color: aqua;
+  color: black;
+  padding: 2rem;
+  text-transform: uppercase;
+}
 
-
-.bold{font-weight: bold;}
-.bg{background-color: yellow;}
-.white-text{color: white;}
-.big-font{font-size: 60px;}
-
-
-
-
+.two{
+  text-align:center ;
+  font-size: 2rem;
+  background-color:red;
+  color:white;
+  padding: 2rem;
+  text-transform: uppercase;
+}
 
 
 
