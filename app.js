@@ -557,7 +557,7 @@ document.body.appendChild(list3)*/
 //add
 //remove
 
-let cc = document.querySelector("#one");
+/*let cc = document.querySelector("#one");
 cc.addEventListener("click", function () {
   let allClass = cc.classList.contains("one");
   if (allClass) {
@@ -575,6 +575,21 @@ mm.addEventListener('click',function(){
   }else{
     mm.classList.add('two')
   }
-})
+})*/
+
+//date
+//math method
+let months=['january','february','march','april','may','june','july','august','september','october','november','december']
+let days=['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
+
+let date=new Date
+let month=new Date().getMonth()
+let day=new Date().getDay()
+console.log(days[day])
+console.log(months[month])
 
 
+let number=18.9
+let roundup=Math.ceil(number)
+let rounddown=Math.floor(number)
+console.log(rounddown)
