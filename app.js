@@ -598,7 +598,7 @@ const div=document.getElementById('div')
 const span=document.getElementById('span')
 const btn=document.getElementById('btn')*/
 
- /* body.addEventListener('click',function(){
+/* body.addEventListener('click',function(){
     console.log('body was clicked')
   })
   div.addEventListener('click',function(){
@@ -625,8 +625,7 @@ console.log(myObj_serialized)*/
 /*localStorage,getItem('myObj',myobj)
 console.log(localStorage)*/
 
-
-//asynchronous 
+//asynchronous
 /*console.log('I')
 console.log('am')
 setTimeout(()=>{
@@ -635,8 +634,8 @@ setTimeout(()=>{
 console.log('right')
 console.log('now')*/
 
-//callback 
-let stock={
+//callback
+/*let stock={
 fruits:['strawberry','mango','orange','pinapple'],
 toppings:['skittles','chocolate','gummies'],
 holder:['cup','cone','stick'],
@@ -668,4 +667,45 @@ setTimeout(()=>{
   },1000 )
 
 }
-order(0,production)
+order(0,production)*/
+
+let stock = {
+  fruits: ["strawberry", "mango", "orange", "pinapple"],
+  toppings: ["skittles", "chocolate", "gummies"],
+  holder: ["cup", "cone", "stick"],
+  liquid: ["water", "milk", "simple syrup"],
+};
+
+let is_shop_open = false
+let order=((time,work)=>{
+  return new Promise((resolve, reject) => {
+    if(is_shop_open){
+      setTimeout(()=>{
+        resolve(work())
+      },time)
+    }else{
+      reject(console.log('our shop is closed'))
+    }
+  })
+})
+order(2000,()=>console.log(`${stock.fruits[1]} was selected`))
+.then(()=>{
+  return order(1000,()=>console.log('production has started'))
+})
+.then(()=>{
+  return order(2000,()=>console.log(`the ${stock.fruits[1]} has been washed and chopped`))
+})
+.then(()=>{
+  return order(2000,()=>console.log('the Ice cream has been made'))
+})
+.then(()=>{
+  return order(1000,()=>console.log(`${stock.toppings[1]} has been chosen as topping`))
+})
+.catch(()=>{
+  console.log('customer left')
+})
+.finally(()=>{
+  console.log('shop closed for the day')
+})
+
+//asynch
