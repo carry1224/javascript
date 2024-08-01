@@ -610,7 +610,7 @@ const btn=document.getElementById('btn')*/
   btn.addEventListener('click',function(){
     console.log('btn was clicked')
   })*/
-let myForm=document.getElementById('myForm')
+/*let myForm=document.getElementById('myForm')
 myForm.addEventListener('submit',(e)=>{
 e.preventDefault()
 console.log('form has been submitted')
@@ -621,19 +621,51 @@ name:'carry',
 age:20
 }
 let myObj_serialized=JSON.stringify(myobj)
-console.log(myObj_serialized)
+console.log(myObj_serialized)*/
 /*localStorage,getItem('myObj',myobj)
 console.log(localStorage)*/
 
 
 //asynchronous 
-console.log('I')
+/*console.log('I')
 console.log('am')
 setTimeout(()=>{
   console.log('drawing')
 },5000)
 console.log('right')
-console.log('now')
+console.log('now')*/
 
+//callback 
+let stock={
+fruits:['strawberry','mango','orange','pinapple'],
+toppings:['skittles','chocolate','gummies'],
+holder:['cup','cone','stick'],
+liquid:['water','milk','simple syrup']
+}
+let order=(fruit,cb)=>{
+  
+  setTimeout(()=>{
+    console.log(`${stock.fruits[fruit]} was selected`)
+    cb()
+  },2000)
+}
+//callback hell (format)
+let production=()=>{
+  setTimeout(()=>{
+    console.log('production has started')
+setTimeout(()=>{
+  console.log('the fruit has been chopped')
+  setTimeout(()=>{
+    console.log('water has been added')
+    setTimeout(()=>{
+      console.log('the icream was mixed')
+      setTimeout(()=>{
+        console.log(`toppings,${stock.toppings[1]},was added`)
+      },2000)
+    },2000)
+  },1000)
+},2000)
+  },1000 )
 
-
+}
+order(0,production)
