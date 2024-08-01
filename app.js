@@ -579,7 +579,7 @@ mm.addEventListener('click',function(){
 
 //date
 //math method
-let months=['january','february','march','april','may','june','july','august','september','october','november','december']
+/*let months=['january','february','march','april','may','june','july','august','september','october','november','december']
 let days=['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
 
 let date=new Date
@@ -588,8 +588,52 @@ let day=new Date().getDay()
 console.log(days[day])
 console.log(months[month])
 
-
 let number=18.9
 let roundup=Math.ceil(number)
 let rounddown=Math.floor(number)
 console.log(rounddown)
+
+const body=document.getElementsByTagName('body')
+const div=document.getElementById('div')
+const span=document.getElementById('span')
+const btn=document.getElementById('btn')*/
+
+ /* body.addEventListener('click',function(){
+    console.log('body was clicked')
+  })
+  div.addEventListener('click',function(){
+    console.log('div was clicked')
+  })
+  span.addEventListener('click',function(){
+    console.log('span was clicked')
+  })
+  btn.addEventListener('click',function(){
+    console.log('btn was clicked')
+  })*/
+let myForm=document.getElementById('myForm')
+myForm.addEventListener('submit',(e)=>{
+e.preventDefault()
+console.log('form has been submitted')
+})
+
+let myobj={
+name:'carry',
+age:20
+}
+let myObj_serialized=JSON.stringify(myobj)
+console.log(myObj_serialized)
+/*localStorage,getItem('myObj',myobj)
+console.log(localStorage)*/
+
+
+//asynchronous 
+console.log('I')
+console.log('am')
+setTimeout(()=>{
+  console.log('drawing')
+},5000)
+console.log('right')
+console.log('now')
+
+
+
