@@ -677,7 +677,7 @@ let stock = {
 };
 
 let is_shop_open = false
-let order=((time,work)=>{
+/*let order=((time,work)=>{
   return new Promise((resolve, reject) => {
     if(is_shop_open){
       setTimeout(()=>{
@@ -706,6 +706,18 @@ order(2000,()=>console.log(`${stock.fruits[1]} was selected`))
 })
 .finally(()=>{
   console.log('shop closed for the day')
-})
+})*/
 
 //asynch
+async function order(){
+  try{
+    await abc
+  }
+  catch(error){
+    console.log('abc does not exist',error)
+  }
+  finally{
+    console.log('runs code anyway')
+  }
+}
+order()
