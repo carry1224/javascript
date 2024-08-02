@@ -669,14 +669,14 @@ setTimeout(()=>{
 }
 order(0,production)*/
 
-let stock = {
+/*let stock = {
   fruits: ["strawberry", "mango", "orange", "pinapple"],
   toppings: ["skittles", "chocolate", "gummies"],
   holder: ["cup", "cone", "stick"],
   liquid: ["water", "milk", "simple syrup"],
 };
 
-let is_shop_open = false
+let is_shop_open = false*/
 /*let order=((time,work)=>{
   return new Promise((resolve, reject) => {
     if(is_shop_open){
@@ -708,8 +708,8 @@ order(2000,()=>console.log(`${stock.fruits[1]} was selected`))
   console.log('shop closed for the day')
 })*/
 
-//asynch
-async function order(){
+//async
+/*async function order(){
   try{
     await abc
   }
@@ -720,4 +720,38 @@ async function order(){
     console.log('runs code anyway')
   }
 }
-order()
+order()*/
+
+//await
+let stock = {
+  fruits: ["strawberry", "mango", "orange", "pinapple"],
+  toppings: ["skittles", "chocolate", "gummies"],
+  holder: ["cup", "cone", "stick"],
+  liquid: ["water", "milk", "simple syrup"],
+};
+
+let is_shop_open = true
+let topping_choice=()=>{
+  return new Promise((resolve, reject) => {
+    setTimeout(()=>{
+      resolve(
+        console.log('which topping would you like?')
+      )
+    
+    },1000)
+  })
+}
+
+async function kitchen(){
+  console.log('A')
+  console.log('B')
+  console.log('C')
+  await topping_choice()
+  console.log('D')
+  console.log('E')
+}
+kitchen()
+console.log('doing the dishes')
+console.log('cleaning the tables')
+console.log('taking other orders')
+
