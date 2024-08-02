@@ -723,7 +723,7 @@ order(2000,()=>console.log(`${stock.fruits[1]} was selected`))
 order()*/
 
 //await
-let stock = {
+/*let stock = {
   fruits: ["strawberry", "mango", "orange", "pinapple"],
   toppings: ["skittles", "chocolate", "gummies"],
   holder: ["cup", "cone", "stick"],
@@ -753,5 +753,43 @@ async function kitchen(){
 kitchen()
 console.log('doing the dishes')
 console.log('cleaning the tables')
-console.log('taking other orders')
+console.log('taking other orders')*/
 
+let stock = {
+  fruits: ["strawberry", "mango", "orange", "pinapple"],
+  toppings: ["skittles", "chocolate", "gummies"],
+  holder: ["cup", "cone", "stick"],
+  liquid: ["water", "milk", "simple syrup"],
+};
+
+let is_shop_open = true
+function time(ms){
+  new Promise((resolve, reject) => {
+    if(is_shop_open){
+      setTimeout(resolve,ms)
+    }else{
+      reject(
+        console.log('out of fruit ')
+      )
+    }
+  })
+}
+async function kitchen(){
+  try{
+    await time(2000)
+    console.log(`the fruit of choice is ${stock.fruits[3]}`)
+    await time(1000)
+    console.log('fruit has been washed and chopped')
+    await time(2000)
+    console.log(`${stock.liquid[2]} has been added to make the ice cream sweet`)
+    await time(2000)
+    console.log('process has been completed')
+    await time(1000)
+    console.log('the ice cream is served')
+  }catch(error){
+    console.log('customer left',error)
+  }finally{
+    console.log('day is over,shop is closed ')
+  }
+}
+kitchen()
