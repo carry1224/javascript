@@ -854,7 +854,7 @@ let deposit=(time,work)=>{
 deposit()*/
 
 //constructor function
-let person=function(name,gender,birthYear){
+/*let person=function(name,gender,birthYear){
 this.name=name
 this.gender=gender
 this.birthYear=birthYear
@@ -865,15 +865,109 @@ person.prototype.calcAge=function(){
 }
 person.prototype.city='Istanbul'
 let john=new person('john','male',1978)
-console.log(john)
+console.log(john.hasOwnProperty('name'))
 john.calcAge()
 let mary=new person('mary','female',1990)
 console.log(mary)
 mary.calcAge()
 let peter=new person('peter','male',2005)
 console.log(peter)
-peter.calcAge()
+peter.calcAge()*/
 
+//class constructor
+/*class Person{
+  constructor(name,gender,birthYear){
+    this.name=name
+    this.gender=gender
+    this.birthYear=birthYear
+  }
+}
+let john=new Person('john','male',1978)
+console.log(john)*/
+ 
+//getter and setter properties
+/*let person={
+  name:'john',
+  age:17,
+  gender:'male',
+  get getName(){
+    return this.name
+  },
+  set setName(val){
+    this.name=val
+  }
+}
+console.log(person.getName)
+person.setName='mary'
+console.log(person.getName)*/
 
+/*let person={
+  name:'john',
+  age:17,
+  gender:'male',
+  get getName(){
+    return 'Mr. '+this.name
+  },
+  set setName(val){
+    if(val.length<4){
+      alert('!!!VALUE MUST BE 4 DIGITS!!!')
+    }else{
+      this.name=val
+    }
+  }
+}
+console.log(person.getName)
+person.setName='moe'
+console.log(person.getName)*/
 
+/*class User{
+  constructor(name,password,gender){
+    this.name=name
+    this.password=password
+    this.gender=gender
+  }
+  set setPassword(val){
+    if(val.length<4){
+      console.log('!!PASSWORD MUST BE OF 4 CHARACTERS!!')
+    }else{
+      this.password=val
+    }
+  }
+}
+let cate=new User('cate','1224','female')
+cate.setPassword='1534'
+console.log(cate)*/
 
+//static method
+class User{
+  constructor(name,password,gender){
+    this.name=name
+    this.password=password
+    this.gender=gender
+  }
+  static greet(){
+    console.log('!!!HELLO WORLD!!!')
+  }
+}
+let joy=new User('joy','1224','female')
+console.log(joy)
+User.greet()
+
+//static method
+let person=function(name,gender,birthYear){
+  this.name=name
+  this.gender=gender
+  this.birthYear=birthYear
+  }
+  person.prototype.calcAge=function(){
+    let age=new Date().getFullYear()-this.birthYear
+    console.log(age)
+  }
+  person.greet=function(){
+    console.log('!!ENJOY THE DAY')
+  }
+  person.prototype.city='Istanbul'
+  let john=new person('john','male',1978)
+  console.log(john.hasOwnProperty('name'))
+  john.calcAge()
+  person .greet()
