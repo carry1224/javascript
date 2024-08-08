@@ -676,8 +676,8 @@ order(0,production)*/
   liquid: ["water", "milk", "simple syrup"],
 };
 
-let is_shop_open = false*/
-/*let order=((time,work)=>{
+let is_shop_open = true
+let order=((time,work)=>{
   return new Promise((resolve, reject) => {
     if(is_shop_open){
       setTimeout(()=>{
@@ -755,7 +755,7 @@ console.log('doing the dishes')
 console.log('cleaning the tables')
 console.log('taking other orders')*/
 
-let stock = {
+/*let stock = {
   fruits: ["strawberry", "mango", "orange", "pinapple"],
   toppings: ["skittles", "chocolate", "gummies"],
   holder: ["cup", "cone", "stick"],
@@ -792,4 +792,88 @@ async function kitchen(){
     console.log('day is over,shop is closed ')
   }
 }
-kitchen()
+kitchen()*/
+
+
+/*let peters_deposit=true
+let deposit=(time,work)=>{
+  return new Promise((resolve, reject) => {
+    if(peters_deposit){
+      setTimeout(()=>{
+        resolve(work)
+        setTimeout(()=>{ 
+          console.log('peter enters the bank')
+          setTimeout(()=>{
+            console.log('proceed to teller 15')
+            setTimeout(()=>{
+              console.log('banking service')
+              setTimeout(()=>{
+                console.log('addressing complaints')
+                setTimeout(()=>{
+                  console.log('documenting service experience')
+                  setTimeout(()=>{
+                    console.log('THANK YOU FOR VISITING US,WELCOME AGAIN')
+                  },20000)
+                },18000)
+              },10000)
+          },16000)
+        },10000)
+      },time)
+    } )}
+    })}
+  deposit()*/
+
+
+/*async function deposit(){
+  try{
+    console.log('peter enters bank')
+    setTimeout(()=>{
+      console.log(' peter proceeds to teller 15')
+    },10000)
+    setTimeout(()=>{
+      console.log('peter is depositing ')
+    },16000)
+    setTimeout(()=>{
+      console.log('peter is addressing the complaints he had at the cashier desk')
+    },26000)
+    setTimeout(()=>{
+      console.log(' peter documented his banking experience')
+    },44000)
+    }
+  catch(error){
+    setTimeout(()=>{
+      console.log('banking complete')
+    },45000)
+  }finally{
+    setTimeout(()=>{
+      console.log('THANK YOU FOR VISITING US,WELCOME AGAIN')
+    },45000)
+  
+  }
+}
+deposit()*/
+
+//constructor function
+let person=function(name,gender,birthYear){
+this.name=name
+this.gender=gender
+this.birthYear=birthYear
+}
+person.prototype.calcAge=function(){
+  let age=new Date().getFullYear()-this.birthYear
+  console.log(age)
+}
+person.prototype.city='Istanbul'
+let john=new person('john','male',1978)
+console.log(john)
+john.calcAge()
+let mary=new person('mary','female',1990)
+console.log(mary)
+mary.calcAge()
+let peter=new person('peter','male',2005)
+console.log(peter)
+peter.calcAge()
+
+
+
+
