@@ -939,7 +939,7 @@ cate.setPassword='1534'
 console.log(cate)*/
 
 //static method
-class User{
+/*class User{
   constructor(name,password,gender){
     this.name=name
     this.password=password
@@ -971,3 +971,80 @@ let person=function(name,gender,birthYear){
   console.log(john.hasOwnProperty('name'))
   john.calcAge()
   person .greet()
+
+  //object.create method
+  let people={
+    init(name,gender,birthYear){
+      this.name=name
+      this.gende=gender
+      this.birthYear=birthYear
+    }
+  }
+
+  let james=Object.create(people)
+  james.name='james'
+  james.gender='male'
+  james.birthYear=1990
+  console.log(james)
+
+  let mark=Object.create(people)
+  mark.init('mark','male',2002)
+  console.log(mark)*/
+
+//inheritance btwn function constructors
+  /*let person=function(name,gender,birthYear){
+    this.name=name
+    this.gender=gender
+    this.birthYear=birthYear
+  }
+  person.prototype.calcAge=function(){
+    let age=new Date().getFullYear()-this.birthYear
+    console.log(age)
+  }
+  let john=new person('john','male',2000)
+  console.log(john)
+
+  let employee=function(name,gender,birthYear,emplId,salary){
+   person.call(this,name,gender,birthYear)
+    this.emplId=emplId
+    this.salary=salary
+  }
+  employee.prototype=person.prototype
+
+  employee.prototype.calcSalary=function(){
+    return this.salary*12
+  }
+  employee.prototype.empDetails=function(){
+    console.log(this.name)
+    console.log(this.emplId)
+  }
+let mark=new employee('mark','male',2000,1234,12000)
+console.log(mark)*/
+
+class person{
+  constructor(name,gender,birthYear){
+    this.name=name
+    this.gender=gender
+    this.birthYear=birthYear
+  }
+  calcAge(){
+    console.log(new Date().getFullYear()-this.birthYear)
+  }
+}
+
+class employee extends person{
+  constructor(name,gender,birthYear,emplId,salary){
+    super(name,gender,birthYear)
+    this.emplId=emplId
+    this.salary=salary
+  }
+  calcSalary(){
+    return this.salary * 12
+  }
+  empdetails(){
+    console.log(this.name)
+    console.log(this.emplId)
+  }
+}
+let mary=new employee('mary','female',2005,1224,5600000)
+console.log(mary)
