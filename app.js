@@ -1049,3 +1049,25 @@ class employee extends person{
 }
 let mary=new employee('mary','female',2005,1224,5600000)
 console.log(mary)*/
+
+//inheritance btwn object.create
+let person={
+  calcAge(){
+    return new Date().getFullYear()-this.birthYear
+  },
+  personInit(name,gender,birthYear){
+    this.person=name
+    this.gender=gender
+    this.birthYear=birthYear
+  }
+}
+let employee=Object.create(person)
+employee.employeeInit=function(name,gender,birthYear,emplId,salary){
+employee.personInit.call(this,name,gender,birthYear)
+this.emplId=emplId
+this.salary=salary
+}
+let mark=Object.create(employee)
+mark.employeeInit('mark','male',2000,345,450000)
+console.log(mark)
+
