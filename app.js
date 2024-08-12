@@ -1021,7 +1021,8 @@ let person=function(name,gender,birthYear){
 let mark=new employee('mark','male',2000,1234,12000)
 console.log(mark)*/
 
-class person{
+//inheritance btwn classes
+/*class person{
   constructor(name,gender,birthYear){
     this.name=name
     this.gender=gender
@@ -1047,4 +1048,4 @@ class employee extends person{
   }
 }
 let mary=new employee('mary','female',2005,1224,5600000)
-console.log(mary)
+console.log(mary)*/
