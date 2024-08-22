@@ -224,12 +224,12 @@ for(i;i<=15;i++){
   console.log(i)
 }*/
 
-/* let employees=[
+/*let employees=[
   {fname:'joy',age:34,nationality:'kenyan',gender:'female',id:4},
-  {fname:'bill',age:46,nationality:'tanzanian',gender:'male',id:5},
+  {fname:'bill',age:46,nationality:'tanzanian',gender:'male',id:7},
   {fname:'mary',age:23,nationality:'ugandan',gender:'female',id:7}
-]
- /* function allAges(ages){
+]*/
+/* function allAges(ages){
 console.log(ages.age)
   }
   employees.forEach(allAges)*/
@@ -239,34 +239,33 @@ return names.id==7
 })
 console.log(fd)
 
-/*let filter=employees.filter(function(names){
+let filter=employees.filter(function(names){
   return names.age==46
 })
 console.log(filter)*/
 
 //reduce method(combines values in an array to one value)
-/*let allAges=employees.reduce(function(acc,currentvalue){
-  return acc+currentvalue.age
+/*let allid=employees.reduce(function(acc,currentvalue){
+  return acc+currentvalue.id
 },0)
-console.log(allAges)
+console.log(allid)
 //callback
-function callback(acc,currentvalue){
+/*function callback(acc,currentvalue){
   return acc+currentvalue.id
 }
 let allid=employees.reduce(callback,0)
-console.log(allid)
+console.log(allid)*/
 //map(returns an array )
-let mp=employees.map(function(carry){
+/*let mp=employees.map(function(carry){
   return carry.age
 })
-console.log(mp)
+console.log(mp)*/
 
-let arr=[69,89,49,100]
+/*let arr=[69,89,49,100]
 let cate=arr.reduce(function(){
   return arr[3]
 })
-console.log(cate)
-
+console.log(cate)*/
 
 //introduction to dom( document,object,model)
 //getelementbyid
@@ -794,7 +793,6 @@ async function kitchen(){
 }
 kitchen()*/
 
-
 /*let peters_deposit=true
 let deposit=(time,work)=>{
   return new Promise((resolve, reject) => {
@@ -822,7 +820,6 @@ let deposit=(time,work)=>{
     } )}
     })}
   deposit()*/
-
 
 /*async function deposit(){
   try{
@@ -884,7 +881,7 @@ peter.calcAge()*/
 }
 let john=new Person('john','male',1978)
 console.log(john)*/
- 
+
 //getter and setter properties
 /*let person={
   name:'john',
@@ -964,16 +961,16 @@ let person=function(name,gender,birthYear){
     console.log(age)
   }
   person.greet=function(){
-    console.log('!!ENJOY THE DAY')
+    console.log('!!ENJOY THE DAY!!')
   }
   person.prototype.city='Istanbul'
   let john=new person('john','male',1978)
   console.log(john.hasOwnProperty('name'))
   john.calcAge()
-  person .greet()
+  person .greet()*/
 
-  //object.create method
-  let people={
+//object.create method
+/*let people={
     init(name,gender,birthYear){
       this.name=name
       this.gende=gender
@@ -992,7 +989,7 @@ let person=function(name,gender,birthYear){
   console.log(mark)*/
 
 //inheritance btwn function constructors
-  /*let person=function(name,gender,birthYear){
+/*let person=function(name,gender,birthYear){
     this.name=name
     this.gender=gender
     this.birthYear=birthYear
@@ -1051,7 +1048,7 @@ let mary=new employee('mary','female',2005,1224,5600000)
 console.log(mary)*/
 
 //inheritance btwn object.create
-let person={
+/*let person={
   calcAge(){
     return new Date().getFullYear()-this.birthYear
   },
@@ -1069,5 +1066,36 @@ this.salary=salary
 }
 let mark=Object.create(employee)
 mark.employeeInit('mark','male',2000,345,450000)
-console.log(mark)
+console.log(mark)*/
 
+//iife,closures,spread operators,ajax,modules in js
+
+//spread operators
+
+//arrows funtions
+let numbers = [10, 20, 30];
+let allsNumbers = [...numbers];
+function addNumber(num1, num2, num3) {
+  return num1 + num2 + num3;
+}
+let number = [50, 30, 20];
+let total = addNumber(...number);
+
+let employees = [
+  { fname: "joy", age: 34, nationality: "kenyan", gender: "female", id: 4 },
+  { fname: "bill", age: 46, nationality: "tanzanian", gender: "male", id: 5 },
+  { fname: "mary", age: 23, nationality: "ugandan", gender: "female", id: 8 },
+  { fname: "mary", age: 23, nationality: "kenyan", gender: "female", id: 7 },
+];
+
+employees.forEach((national) => {
+  console.log(national.nationality.toUpperCase());
+});
+
+//modules
+/*let message = () => {
+  name: "james";
+  age: 40;
+  return name + "is" + age + "years old";
+};
+export default message;*/
