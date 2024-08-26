@@ -1073,7 +1073,7 @@ console.log(mark)*/
 //spread operators
 
 //arrows funtions
-let numbers = [10, 20, 30];
+/*let numbers = [10, 20, 30];
 let allsNumbers = [...numbers];
 function addNumber(num1, num2, num3) {
   return num1 + num2 + num3;
@@ -1081,16 +1081,29 @@ function addNumber(num1, num2, num3) {
 let number = [50, 30, 20];
 let total = addNumber(...number);
 
+
 let employees = [
   { fname: "joy", age: 34, nationality: "kenyan", gender: "female", id: 4 },
   { fname: "bill", age: 46, nationality: "tanzanian", gender: "male", id: 5 },
   { fname: "mary", age: 23, nationality: "ugandan", gender: "female", id: 8 },
   { fname: "mary", age: 23, nationality: "kenyan", gender: "female", id: 7 },
 ];
-
-employees.forEach((national) => {
+//ajax*http,api*application programming interface
+//closure
+function morning(){
+ function evening(){
+ }
+ evening()
+}
+morning()
+//hoisting
+evening()
+function evening(){
+  console.log('good evening')
+}
+/*employees.forEach((national) => {
   console.log(national.nationality.toUpperCase());
-});
+});*/
 
 //modules
 /*let message = () => {
@@ -1099,3 +1112,33 @@ employees.forEach((national) => {
   return name + "is" + age + "years old";
 };
 export default message;*/
+
+//AJAX request to web API
+/*function getCountry(countryName){
+  let xhr=new XMLHttpRequest()
+  xhr.open('GET','https://restcountries.com/v3.1/name/'+countryName,true)
+  xhr.send()
+  xhr.addEventListener('load',function(){
+    //console.log(xhr.responseText)
+    let [data]=JSON.parse(xhr.responseText)
+    //let countryData=data[0]
+    console.log(data)
+  })
+}
+getCountry('india')*/
+
+//fetching an API
+function getCountry(country){
+  let promise1=fetch(' https://restcountries.com/v3.1/name/'+country)
+  let promise2=promise1.then(function(response){
+    console.log(response)
+    return response.json()
+  })
+  promise2.then(function(data){
+    console.log(data)
+  })
+}
+getCountry('kenya')
+
+
+
