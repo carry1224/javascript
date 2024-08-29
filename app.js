@@ -1128,7 +1128,7 @@ export default message;*/
 getCountry('india')*/
 
 //fetching an API
-function getCountry(country){
+/*function getCountry(country){
   let promise1=fetch(' https://restcountries.com/v3.1/name/'+country)
   let promise2=promise1.then(function(response){
     console.log(response)
@@ -1138,7 +1138,10 @@ function getCountry(country){
     console.log(data)
   })
 }
-getCountry('kenya')
+getCountry('kenya')*/
 
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
-
+console.log(fruits)
+let text = fruits.join();
+console.log(text)
